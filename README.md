@@ -1,2 +1,2 @@
-# Lqube
+# LQube
 Website Design for LQUBE
