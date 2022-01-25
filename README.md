@@ -1,3 +1,3 @@
 # LQube
-Website Design for LQUBE
+HtML-CSS Frontend for LQUBE
 > https://vaxraxd.github.io/Lqube/homepage
