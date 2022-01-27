@@ -6,36 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LQUBE</title>
     <link rel="stylesheet" href="static/css/homepage.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <section class="header">
       <nav>
         <div class="logo">
-          <a href="#"><img src="static/images/Logo.png" /></a>
+          <a href="homepage.html"><img src="static/images/Logo.png" /></a>
         </div>
         <div class="nav-links" id="navLinks">
           <i class="fa fa-times" onclick="hideMenu()" id="close"></i>
-
           <ul>
-            <li><a href="#">NEW ARRIVAL</a></li>
-            <li><a href="#">TRENDING</a></li>
-            <li><a href="#">SALE</a></li>
-            <li><a href="#">CUSTOMISE</a></li>
+            <li><a href="">NEW ARRIVAL</a></li>
+            <li><a href="">TRENDING</a></li>
+            <li><a href="">SALE</a></li>
+            <li><a href="">CUSTOMISE</a></li>
+            
           </ul>
         </div>
         <div class="cart">
           <i class="fa fa-shopping-cart" aria-hidden="true"></i>
         </div>
+        <!-- start -->
+        <div class="log">
+          <li1>
+            <button
+              class="loginbtn"
+              onclick="document.getElementById('login-form').style.display='block'"
+              style="width: auto"
+            >
+              SIGN-IN
+            </button>
+          </li1>
+        </div>
+        <!-- end -->
         <div class="signedin">
           <i class="fa fa-user-circle-o" aria-hidden="true"></i>
         </div>
-        <div class="sign-in1">
-          <a href="#"><img src="static/images/signin.png" /></a>
-        </div>
-        <div class="sign-in" id="signin">
-          <a href="#"><img src="static/images/user.png" /></a>
-        </div>
+
         <i class="fa fa-bars" onclick="showMenu()" id="open"></i>
 
         <div class="types">
@@ -44,6 +55,76 @@
           <img src="static/images/image3.png" id="img3" />
         </div>
       </nav>
+      <!-- start -->
+      <div id="login-form" class="login-page">
+        <div class="form-box">
+          <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" onclick="login()" class="toggle-btn">
+              Log In
+            </button>
+            <button type="button" onclick="register()" class="toggle-btn">
+              Register
+            </button>
+          </div>
+          <form id="login" class="input-group-login">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="Email Id"
+              required
+            />
+            <input
+              type="password"
+              class="input-field"
+              placeholder="Enter Password"
+              required
+            />
+            <input type="checkbox" class="check-box" /><span
+              >Remember Password</span
+            >
+            <button type="submit" class="submit-btn">Log in</button>
+          </form>
+          <form id="register" class="input-group-register">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="First Name"
+              required
+            />
+            <input
+              type="text"
+              class="input-field"
+              placeholder="Last Name "
+              required
+            />
+            <input
+              type="email"
+              class="input-field"
+              placeholder="Email Id"
+              required
+            />
+            <input
+              type="password"
+              class="input-field"
+              placeholder="Enter Password"
+              required
+            />
+            <input
+              type="password"
+              class="input-field"
+              placeholder="Confirm Password"
+              required
+            />
+            <input type="checkbox" class="check-box" /><span
+              >I agree to the terms and conditions</span
+            >
+            <button type="submit" class="submit-btn">Register</button>
+          </form>
+        </div>
+      </div>
+      <!-- end -->
+    </div>
     </section>
     <script>
       var navLinks = document.getElementById("navLinks");
@@ -54,5 +135,30 @@
         navLinks.style.right = "-200px";
       }
     </script>
+    <!-- start -->
+    <script>
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+      var z = document.getElementById("btn");
+      function register() {
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+      }
+      function login() {
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0px";
+      }
+    </script>
+    <script>
+      var modal = document.getElementById("login-form");
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+    <!-- end -->
   </body>
 </html>
